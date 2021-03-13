@@ -1,16 +1,54 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px">
+<div class="container" >
+	<div class="container">
+		<h1>Menu</h1>
+		<hr>
+	</div>
 	
-	<mat-list fxFlex >
-		<mat-list-item *ngFor="let dish of dishes">
-			<img matListAvatar src="{{dish.image}}" alt="{{dish.name}}">
-			<h1 matLine> {{dish.name}} </h1>
-			<small> Price: {{dish.price }}</small><br>
-			<p matLine>
-				<span>
-				{{dish.description}}
-				</span> 
-			</p>
-		</mat-list-item>
-	</mat-list>
+	<div class=" row row-cols-4 mb-2" >
+		<div class="col card-group" *ngFor="let dish of dishes">
+			<div class="card" style="margin: 5px; max-width: 300px" >
+				
+				<div class="card-header">
+					<img class="rounded mx-auto d-block" src="{{dish.image}}" 
+					alt="{{dish.name}}">
+				</div>
+				<div class="card-body">
+					<h5 class="card-title">{{dish.name | uppercase}}</h5>
+					<p class="card-text"> {{dish.description}} </p>
+				</div>
+				<div class="card-footer">
+					<span>Price {{dish.price}}</span>
+				</div>
+			</div>
+		</div>
 
+	</div>
+
+	<div class="container" *ngIf="selectedDish">
+		
+		<div class="card" style="margin: 5px; max-width: 300px" >
+				
+				<div class="card-header bg-warning">
+					<img class="rounded mx-auto d-block" src="{{selectedDish.image}}" 
+					alt="{{selectedDish.name}}">
+				</div>
+				<div class="card-body bg-warning">
+					<h5 class="card-title">{{selectedDish.name | uppercase}}</h5>
+					<p class="card-text"> {{selectedDish.description}} </p>
+				</div>
+				<div class="card-footer text-center">
+					<div class="btn-group">
+						<button type="button" class="btn btn-sm btn-success"> Like </button>
+						<button type="button" class="btn btn-sm btn-danger"> Dislike </button>
+					</div>
+				</div>
+		</div>
+
+	</div>
+
+
+
+
+
+		
 </div>
