@@ -1,0 +1,46 @@
+<div class="row" *ngIf="dish">
+		<hr>
+
+		<div class="card-group justify-content-around" >
+
+			<div class="card" style="margin: 5px; max-width: 400px" >
+				
+				<div class="card-header bg-light">
+					<img class="rounded mx-auto d-block" src="{{dish.image}}" 
+					alt="{{dish.name}}">
+				</div>
+				<div class="card-body bg-light">
+					<h5 class="card-title">{{dish.name | uppercase}}</h5>
+					<p class="card-text"> {{dish.description}} </p>
+				</div>
+				<div class="card-footer text-center">
+					
+					<button style="margin: 3px;" type="button" class="btn btn-sm btn-success"> Like </button>
+					<button style="margin: 3px;" type="button" class="btn btn-sm btn-secondary"> Share </button>
+					
+				</div>
+			</div>
+
+
+			<div class="card" style="margin: 5px; max-width: 500px" >
+				
+				<div class="card-header ">
+					<h2>Comments</h2>
+				</div>
+				<div class="card-body ">
+					<div *ngFor="let commentItem of dish.comments">
+						
+						<div class="card-text">
+							<span> {{commentItem.comment }} </span> <br>
+							<span> {{commentItem.rating}} stars</span> <br>
+							<span> -- {{commentItem.author}}, {{commentItem.date | date}} </span>
+						</div>
+						<br>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>	
+</div>
+
