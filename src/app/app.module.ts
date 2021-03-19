@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { DishDetailsComponent } from './dish-details/dish-details.component';
+import { DishService } from './services/dish.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { DishDetailsComponent } from './dish-details/dish-details.component';
     MatListModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [
+    DishService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
