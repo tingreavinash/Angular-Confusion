@@ -6,7 +6,7 @@ import { Dish } from '../shared/dish';
 @Component({
   selector: 'app-dish-details',
   templateUrl: './dish-details.component.html',
-  styleUrls: ['./dish-details.component.css']
+  styleUrls: ['./dish-details.component.scss']
 })
 
 export class DishDetailsComponent implements OnInit {

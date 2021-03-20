@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "css"
+          "style": "scss"
         }
       },
       "root": "",
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
 
             ],
@@ -131,7 +131,7 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "css"
+      "styleext": "scss"
     }
   },
   "defaultProject": "conFusion"
