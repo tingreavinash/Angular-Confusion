@@ -1,5 +1,5 @@
-<div class="row" *ngIf="dish">
-		<hr>
+
+<div class="row justify-content-center" *ngIf="dish">
 
 		<div class="col card-group " >
 
@@ -14,7 +14,7 @@
 					<p class="card-text"> {{dish.description}} </p>
 				</div>
 				<div class="card-footer text-center">
-					
+					<button style="margin: 3px;" type="button" (click)="goBack()" class="btn btn-sm btn-light"> Back </button>
 					<button style="margin: 3px;" type="button" class="btn btn-sm btn-success"> Like </button>
 					<button style="margin: 3px;" type="button" class="btn btn-sm btn-secondary"> Share </button>
 					
@@ -23,7 +23,7 @@
 
 		</div>
 		<div class="col card-group" >
-			<div class="card" style="margin: 5px; max-width: 500px" >
+			<div class="card" style="margin: 5px; max-width: 500px" *ngIf="dish">
 				
 				<div class="card-header ">
 					<h2>Comments</h2>

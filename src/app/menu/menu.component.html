@@ -7,7 +7,7 @@
 	
 
 	<div class=" row row-cols-4 mb-2" >
-		<div class="col card-group" *ngFor="let dish of dishes" (click)="onSelect(dish)">
+		<div class="col card-group" *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">
 			<div class="card" style="margin: 5px; max-width: 300px" >
 				
 				<div class="card-header">
@@ -26,9 +26,7 @@
 
 	</div>
 
-	<div class="container-fluid" >
-		<app-dish-details [dish]="selectedDish"></app-dish-details>
-	</div>
+	
 
 <!-- 
 	
