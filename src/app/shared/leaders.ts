@@ -13,13 +13,13 @@ export const LEADERS: Leader[] = [
     },
     {
       id: '1',
-      name: 'Dhanasekaran Witherspoon',
-      image: '/assets/images/alberto.png',
+      name: 'Avinash Tingre',
+      image: '/assets/images/profile.jpg',
       designation: 'Chief Food Officer',
       abbr: 'CFO',
       featured: false,
       // tslint:disable-next-line:max-line-length
-      description: 'Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!'
+      description: 'Our CFO, Avinash, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!'
     },
     {
       id: '2',
